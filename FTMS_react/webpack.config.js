@@ -9,6 +9,7 @@ module.exports = {
 	devServer:{
 		port:'8888',
 		// host:'192.168.1.96'
+        
 	},
     resolve: { // 使用resolve import的时候可以不带后缀
         extensions: ['.js','.jsx']
