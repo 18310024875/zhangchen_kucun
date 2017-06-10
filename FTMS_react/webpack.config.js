@@ -77,13 +77,13 @@ module.exports = {
     },
 
     // // 生产环境
-    // plugins: [
-    //     //压缩代码
-    //     new webpack.optimize.UglifyJsPlugin({minimize:true}),
-    //     new webpack.DefinePlugin({
-    //        "process.env":{
-    //             NODE_ENV:JSON.stringify('production')
-    //        }
-    //     })    
-    // ]
+    plugins: [
+        //压缩代码
+        new webpack.optimize.UglifyJsPlugin({minimize:true}),
+        new webpack.DefinePlugin({
+           "process.env":{
+                NODE_ENV:JSON.stringify('production')
+           }
+        })    
+    ]
 }
