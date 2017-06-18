@@ -39,7 +39,7 @@
 		},
 		methods:{
 			toCinema(){
-				window.router.push('/cinema')
+				this.$router.push('/cinema')
 			}
 		}
 	}

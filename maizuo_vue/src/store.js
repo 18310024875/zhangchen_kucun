@@ -19,15 +19,15 @@ const mutations = {
 	}
 }
 const actions = {
-    changeMenu({commit}) {
-        commit('changeMenu');
-    },
-    changeCity({commit},city){
-    	commit('changeCity',city)
-    },
-    changeHeaderName({commit},name){
-    	commit('changeHeaderName',name)
-    }
+    // changeMenu({commit}) {
+    //     commit('changeMenu');
+    // },
+    // changeCity({commit},city){
+    // 	commit('changeCity',city)
+    // },
+    // changeHeaderName({commit},name){
+    // 	commit('changeHeaderName',name)
+    // }
 }
 const getters = {}
 

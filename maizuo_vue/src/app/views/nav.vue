@@ -1,6 +1,6 @@
 <template>
 	<div class="cover_mask_menu">
-		<span style="display:none">{{$store.state.menu}}</span>
+		<span style="display:none">{{$state.menu}}</span>
 		<div id="mask" :style="{display:display}"></div>
 		<ul id="menu" :style="{transform:'translate3d'+tran,opacity:opacity}">
 			<h1></h1>
@@ -29,12 +29,12 @@
 		},
 		methods:{
 			closeIt(name){
-				this.$store.dispatch('changeMenu')
-				this.$store.dispatch('changeHeaderName',name)
+				this.$commit('changeMenu')
+				this.$commit('changeHeaderName',name)
 			}
 		},
 		updated(){
-			let pd = this.$store.state.menu ;
+			let pd = this.$state.menu ;
 			if(pd){
 				this.display='block'
 				this.tran="(0,0,0)"
@@ -44,9 +44,6 @@
 				this.tran="(-101%,0,0)"
 				this.opacity='.3'
 			}
-		},
-		mounted(){
-			console.log(this.$store)
 		}
 	}
 </script>

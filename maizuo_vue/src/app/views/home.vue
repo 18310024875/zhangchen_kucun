@@ -72,7 +72,7 @@
 		},
 		methods:{
 			toMovie(arr){
-				window.router.push({path:'/movie',query:{arr:arr}})
+				this.$router.push({path:'/movie',query:{arr:arr}})
 			},
 			addSiwper(){
 		        this.swiper = new Swiper('.swiper-container', {
@@ -84,7 +84,7 @@
 		        }) ;				
 			},
 			toDetails(url){
-				window.router.push({
+				this.$router.push({
 					path:'/details',
 					query:{
 						imgUrl:url

@@ -14,7 +14,18 @@ $get = function(url,callback){
 	.then(function(res){
 	  callback(res.body)
 	})	
-}
+} ;
+
+// Vue组件访问 this.$state 得到 this.$store.state ;
+Object.defineProperty(Vue.prototype,'$state',{
+	get:function(){
+		return this.$store.state ;
+	}
+});
+// Vue组件 this.$commit 调用 this.$store.commit / this.$store.dispatch ;
+Vue.prototype.$commit=function(type,x){
+	this.$store.commit(type,x)
+};
 
 // 组件
 import App from './app/app.vue' ;

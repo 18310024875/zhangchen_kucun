@@ -20,6 +20,9 @@
 		    $route(to, from) {
 		    	console.log(to,from)
 		    }
+		},
+		mounted(){
+			console.log(this.$state)
 		}
 	}
 </script>

@@ -39,8 +39,8 @@
 		},
 		methods:{
 			toHome(city){
-				window.router.push('/home');
-				this.$store.dispatch('changeCity',city)
+				this.$router.push('/home');
+				this.$commit('changeCity',city)
 			},
 			scrollTo(name){
 				this.lis.forEach((v,k)=>{

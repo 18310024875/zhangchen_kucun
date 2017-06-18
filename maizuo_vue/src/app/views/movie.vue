@@ -76,7 +76,7 @@
 		},
 		methods:{
 			toDetails(url){
-				window.router.push({path:'/details',query:{imgUrl:url}})
+				this.$router.push({path:'/details',query:{imgUrl:url}})
 			},
 			changeTab(x){
 				let i = this.tab.indexOf('active');
