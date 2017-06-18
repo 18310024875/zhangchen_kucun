@@ -5,29 +5,30 @@ import Vue from 'vue' ;
 
 import store from './store.js';
 
-// 组件
-import App from './app/app.vue' ;
-import App_header from './app/views/header.vue' ;
-import App_main from './app/views/main.vue' ;
-import Home from './app/views/home.vue' ;
-import Movie from './app/views/movie.vue' ;
-import Cinema from './app/views/cinema.vue' ;
-import Shop from './app/views/shop.vue' ;
-import Mine from './app/views/mine.vue' ;
-import Card from './app/views/card.vue' ;
-import Citys from './app/views/citys.vue' ;
-import Details_ from './app/views/details.vue' ;
-
 // 数据
 import VueResource from 'vue-resource' ;
 Vue.use(VueResource) ;
-
+// 封装方法
 $get = function(url,callback){
     Vue.http.get('./src/json/'+url)
 	.then(function(res){
 	  callback(res.body)
 	})	
 }
+
+// 组件
+import App from './app/app.vue' ;
+// 懒加载组件
+let  App_header = resolve => require(['./app/views/header.vue'] ,resolve);
+let  App_main   = resolve => require(['./app/views/main.vue']   ,resolve);
+let  Home 		= resolve => require(['./app/views/home.vue' ]  ,resolve);
+let  Movie 		= resolve => require(['./app/views/movie.vue']  ,resolve);
+let  Cinema 	= resolve => require(['./app/views/cinema.vue'] ,resolve);
+let  Shop 		= resolve => require(['./app/views/shop.vue' ]  ,resolve);
+let  Mine 		= resolve => require(['./app/views/mine.vue']   ,resolve);
+let  Card 		= resolve => require(['./app/views/card.vue']   ,resolve);
+let  Citys 		= resolve => require(['./app/views/citys.vue']  ,resolve);
+let  Details_	= resolve => require(['./app/views/details.vue'],resolve);
 
 // 路由
 import VueRouter from 'vue-router' ;

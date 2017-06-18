@@ -13,14 +13,24 @@ import 'whatwg-fetch' ;
 
 // 请求数据方法
 $get = function( url ,callback){
-	fetch(url, {method:"GET",mode:"cors",credentials:'credentials'})
+    fetch(url, {method:"GET",mode:"cors",credentials:'credentials'})
     .then((res) =>{return res.json()}).then((data) => {callback(data)})
     .catch(function(e){console.log("fetch fail",e)});
+}
+
+// 重置scrollTop
+let dom=undefined ;
+function change_(old,next){
+    if(!dom){ dom = document.querySelector('#main');}
+    try{
+        dom.scrollTop=0
+    }catch(e){}
 }
 
 // 路由
 let routes =  {
     path: '/',
+    onChange: change_,
     getComponent: (nextState, callback) => {
         require.ensure([], (require) => {
             callback(null, require('./app/app.jsx').default)
@@ -35,19 +45,19 @@ let routes =  {
     },
     childRoutes: [
         { 
-        	path: '/home',
-       		getComponent: (nextState, callback) => {
-    	        require.ensure([], (require) => {
-    	         	callback(null, require('./app/home/home.jsx').default)
-    	        })
-          	}
+            path: '/home',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('./app/home/home.jsx').default)
+                })
+            }
         },
         { 
-        	path: '/movie',
-       		getComponent: (nextState, callback) => {
-    	        require.ensure([], (require) => {
-    	         	callback(null, require('./app/movie/movie.jsx').default)
-    	        })
+            path: '/movie',
+            getComponent: (nextState, callback) => {
+                require.ensure([], (require) => {
+                    callback(null, require('./app/movie/movie.jsx').default)
+                })
             }
         },
         { 
@@ -104,34 +114,6 @@ let routes =  {
 // 渲染
 render(
 <Provider store={ store }>
-	<Router history={browserHistory} routes={routes} />	
+    <Router history={browserHistory} routes={routes} /> 
 </Provider>
 ,document.querySelector("#appWrapper")) ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

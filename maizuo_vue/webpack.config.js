@@ -2,11 +2,12 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/router.js',
+  entry: './src/router_ensure.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: '[name].js',
+    chunkFilename:'[id]--.index.js?[chunkhash]'
   },
   module: {
     rules: [
@@ -59,7 +60,7 @@ module.exports = {
   },
   devtool: '#eval-source-map'
 }
- // 啦啦啦啦啦
+
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
@@ -80,6 +81,3 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
-//666
-// 噼噼啪啪铺
- // 噼噼啪啪铺铺

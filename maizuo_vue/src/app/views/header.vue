@@ -22,7 +22,8 @@
 		},
 		methods:{
 			pdMenu(){
-				this.$store.dispatch('changeMenu');
+				//this.$store.dispatch('changeMenu');
+				this.$store.commit('changeMenu');
 			},
 			toMine(){
 				window.router.push('/mine');

@@ -1,8 +1,5 @@
-
-  
 // 公用部分
   var $get='ajax' ;
-  var $com = 'new Vue()';
 
 // slideDown
   var $slideDown = function(x){
@@ -53,7 +50,7 @@
 
 	// 动态 script
 	var s = document.createElement('script') ;
-	s.src = '/dist/build.js' ;
+	s.src = '/dist/main.js' ;
 	document.body.appendChild(s) ; 
 
 })(document, window);
