@@ -18,6 +18,9 @@ class Header extends Component {
 	toMine(){
 		browserHistory.push('/mine')
 	}
+	componentDidMount(){
+		console.log(this)
+	}
 	render(){
 		return (
 			<header>

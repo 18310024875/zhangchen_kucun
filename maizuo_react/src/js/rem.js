@@ -39,7 +39,7 @@ var $get='ajax' ;
 
 	// 动态 script
 	var s = document.createElement('script') ;
-	s.src = 'bundle.js' ;
+	s.src = 'dist/main.js' ;
 	document.body.appendChild(s) ; 
 
 })(document, window);
