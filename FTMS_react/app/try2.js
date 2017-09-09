@@ -60,7 +60,7 @@ class App extends Component {
 			</div>)
 	}
 }
-// 张海婧
+// JAMES
 
 
 render(<App/>,document.querySelector('#appBox'))
