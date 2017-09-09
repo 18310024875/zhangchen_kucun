@@ -60,7 +60,7 @@ class App extends Component {
 			</div>)
 	}
 }
-// 张海婧
+// KOBE
 
 
 render(<App/>,document.querySelector('#appBox'))
