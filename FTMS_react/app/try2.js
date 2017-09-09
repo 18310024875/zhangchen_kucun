@@ -34,6 +34,14 @@ class App extends Component {
 		})
 	}
 
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
+// 我操的父亲!!!!!!
 	render (){
 		return (
 			<div>
@@ -48,6 +56,7 @@ class App extends Component {
 			</div>)
 	}
 }
+
 
 
 render(<App/>,document.querySelector('#appBox'))
