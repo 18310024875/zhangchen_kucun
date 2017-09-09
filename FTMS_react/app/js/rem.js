@@ -1,5 +1,6 @@
 //rem自动计算
 (function(doc, win) {
+	
 	// console.log(window.innerHeight,document.body.offsetHeight,document.documentElement.clientHeight)
 	var docEl = document.documentElement ;
 	var clientWidth = docEl.clientWidth ;

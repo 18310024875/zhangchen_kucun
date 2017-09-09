@@ -57,6 +57,9 @@ class App extends Component {
 						<h1 style={{background:'red'}}>{this.state.arr2[k]}</h1>
 					</div>)
 				})}
+
+
+				
 			</div>)
 	}
 }

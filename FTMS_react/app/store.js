@@ -9,6 +9,7 @@ const defaultState = {
 		title:'请选择预约日期',
 		color:'gray'	
 	},
+	
 	p_index:{
 		num:0,
 		add:0
