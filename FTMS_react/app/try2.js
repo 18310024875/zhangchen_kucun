@@ -48,6 +48,6 @@ class App extends Component {
 			</div>)
 	}
 }
-
+// 他妈的奥术大师大所大所大所大 草他妈的
 
 render(<App/>,document.querySelector('#appBox'))
