@@ -60,7 +60,11 @@ class App extends Component {
 			</div>)
 	}
 }
+<<<<<<< HEAD
 // JAMES
+=======
+// KOBE
+>>>>>>> bcf43a8112ae10af155afcf0058b315125874008
 
 
 render(<App/>,document.querySelector('#appBox'))
